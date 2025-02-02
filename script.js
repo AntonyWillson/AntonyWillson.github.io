@@ -4,10 +4,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const clickSound = document.getElementById("clickSound");
 
     function moveButton() {
-        const x = Math.random() * (window.innerWidth - noBtn.clientWidth - 20);
-        const y = Math.random() * (window.innerHeight - noBtn.clientHeight - 20);
-        noBtn.style.left = `${x}px`;
-        noBtn.style.top = `${y}px`;
+        const btnGroup = document.querySelector(".btn-group"); // Ambil parent tombol
+        const maxX = btnGroup.clientWidth - noBtn.clientWidth; // Maksimum pergerakan X
+        const maxY = btnGroup.clientHeight - noBtn.clientHeight; // Maksimum pergerakan Y
+        
+        const randomX = Math.random() * maxX; // Posisi X acak dalam batasan parent
+        const randomY = Math.random() * maxY; // Posisi Y acak dalam batasan parent
+        
+        noBtn.style.transform = `translate(${randomX}px, ${randomY}px)`; // Pindah posisi dengan transform
     }
 
     // PC: Tombol "No" bergerak saat hover

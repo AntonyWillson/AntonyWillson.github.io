@@ -106,3 +106,16 @@ button:focus {
         padding: 10px;
     }
 }
+/* Tambahkan ini di bagian akhir style.css */
+.wrapper h3 {
+    font-size: 20px; /* Ukuran font untuk teks baru */
+    margin-top: 20px; /* Jarak atas untuk teks baru */
+    transition: font-size 0.3s ease; /* Transisi halus untuk ukuran font */
+}
+
+/* Responsif untuk perangkat mobile */
+@media (max-width: 600px) {
+    .wrapper h3 {
+        font-size: 18px; /* Ukuran font lebih kecil di perangkat mobile */
+    }
+}
